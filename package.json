@@ -44,10 +44,7 @@
       ]
     ],
     "coverageReporters": [
-      "json",
-      "lcov",
-      "text-summary",
-      "clover"
+      "lcov"
     ]
   }
 }
