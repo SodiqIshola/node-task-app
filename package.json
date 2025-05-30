@@ -20,20 +20,26 @@
   "devDependencies": {
     "jest": "^29.6.1",
     "jest-sonar-reporter": "^2.0.0",
+    "jest-junit": "^16.0.0",          
     "nodemon": "^3.0.2",
     "eslint": "^8.56.0"                                        
   },
   "jest": {
     "reporters": [
       "default",
-      [
+      [ 
         "jest-sonar-reporter",
         {
           "outputDirectory": "coverage",
           "outputName": "sonar-report.xml"
         }
-      ]
-    ]
+      ],
+      ["jest-junit", { 
+        "outputDirectory": ".", 
+        "outputName": "junit.xml" 
+      }]
+    ],
+    "coverageReporters": ["lcov", "text-summary"]
   }
 }
 
